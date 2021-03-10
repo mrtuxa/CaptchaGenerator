@@ -1,3 +1,28 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 zFlxw
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+ */
+
 package com.github.zflxw.captchagenerator.api
 
 import java.io.File
@@ -54,17 +79,39 @@ class CaptchaGenerator {
         TEXT_COLOR = colorCode
     }
 
+    /**
+     * Generate a BufferedImage with a random key and all default settings
+     * @return A BufferedImage with the captcha
+     */
     val captchaImage: BufferedImage?
         get() = this.getCaptchaImage(generateCode())
 
+    /**
+     * generate a BufferedImage with a custom code
+     * @param code the code to integrate in the image
+     * @return the captcha image
+     */
     fun getCaptchaImage(code: String): BufferedImage? {
         return this.getCaptchaImage(code, defaultFontNames)
     }
 
+    /**
+     * generate a BufferedImage with custom code and a custom font vararg
+     *
+     * @param code the code to integrate in the image
+     * @param fontNames the fonts to choose from
+     * @return the captcha image
+     */
     fun getCaptchaImage(code: String, vararg fontNames: String): BufferedImage? {
         return this.getCaptchaImage(code, listOf(*fontNames))
     }
 
+    /**
+     * generate a BufferedImage with custom code a custom font list
+     * @param code the code to integrate in the image
+     * @param fonts the list of fonts to choose from
+     * @return the captcha image
+     */
     fun getCaptchaImage(code: String, fonts: List<String>): BufferedImage? {
         val backgroundImage: BufferedImage
         val noiseImage: BufferedImage
@@ -111,7 +158,7 @@ class CaptchaGenerator {
         private const val DEFAULT_CODE_LENGTH = 5
 
         /**
-         * Generate a random ode with the given length
+         * generate a random code with the given length
          * @param length the length of the code
          * @return the code
          */
