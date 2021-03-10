@@ -32,28 +32,15 @@ import javax.imageio.ImageIO
 object ExampleUsage {
     @JvmStatic
     fun main(args: Array<String>) {
-        // Input files -
+        // Input files
         val bgFile: File = File("assets/images/", "background.png")
         val noiseFile: File = File("assets/images/", "noise.png")
         val outputFile: File = File("output/captcha.png")
 
-        if (!bgFile.exists()) {
-            bgFile.mkdirs()
-            bgFile.createNewFile()
-        }
-
-        if (!noiseFile.exists()) {
-            noiseFile.mkdirs()
-            noiseFile.createNewFile()
-        }
-
-        if (!outputFile.exists()) {
-            outputFile.mkdirs()
-            outputFile.createNewFile()
-        }
-
+        // Declare the instance of the captcha generator with the background and noise layer as parameter
         val captchaGenerator: CaptchaGenerator = CaptchaGenerator(bgFile, noiseFile)
 
+        // write the generated image to a file
         ImageIO.write(captchaGenerator.getCaptchaImage(CaptchaGenerator.generateCode()), "png", outputFile)
     }
 }
