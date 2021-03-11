@@ -80,22 +80,6 @@ class CaptchaGenerator {
     }
 
     /**
-     * Generate a BufferedImage with a random key and all default settings
-     * @return A BufferedImage with the captcha
-     */
-    val captchaImage: BufferedImage?
-        get() = this.getCaptchaImage(generateCode())
-
-    /**
-     * generate a BufferedImage with a custom code
-     * @param code the code to integrate in the image
-     * @return the captcha image
-     */
-    fun getCaptchaImage(code: String): BufferedImage? {
-        return this.getCaptchaImage(code, defaultFontNames)
-    }
-
-    /**
      * generate a BufferedImage with custom code and a custom font vararg
      *
      * @param code the code to integrate in the image
@@ -112,7 +96,7 @@ class CaptchaGenerator {
      * @param fonts the list of fonts to choose from
      * @return the captcha image
      */
-    fun getCaptchaImage(code: String, fonts: List<String>): BufferedImage? {
+    fun getCaptchaImage(code: String, fonts: List<String> = this.defaultFontNames): BufferedImage? {
         val backgroundImage: BufferedImage
         val noiseImage: BufferedImage
         try {
@@ -165,7 +149,7 @@ class CaptchaGenerator {
         @JvmStatic
         fun generateCode(length: Int = DEFAULT_CODE_LENGTH): String {
             val builder = StringBuilder()
-            for (i in 0..4) {
+            for (i in 0 until length) {
                 builder.append(ThreadLocalRandom.current().nextInt(0, 10))
             }
             return builder.toString()

@@ -32,7 +32,7 @@ import javax.imageio.ImageIO
 object ExampleUsage {
     @JvmStatic
     fun main(args: Array<String>) {
-        // Input files
+        // Declare references to the background and noise file and the output file.
         val bgFile: File = File("assets/images/", "background.png")
         val noiseFile: File = File("assets/images/", "noise.png")
         val outputFile: File = File("output/captcha.png")
