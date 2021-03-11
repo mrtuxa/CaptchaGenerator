@@ -1,5 +1,7 @@
 # Captcha Generator
 
+[![](https://jitpack.io/v/zFlxw/CaptchaGenerator.svg)](https://jitpack.io/#zFlxw/CaptchaGenerator)
+
 This project allows you to generate a captcha image for your project. I will probably not work actively on this repository. However, if you want to contribute to this repository, feel free to commit your code and open a pull request. 
 
 # Add to your project
