@@ -46,24 +46,7 @@ class CaptchaGenerator {
     private var backgroundFile: File
     private var noiseFile: File
 
-    constructor(backgroundFile: File, noiseFile: File) {
-        defaultFontNames.add("Verdana")
-        defaultFontNames.add("Arial")
-        defaultFontNames.add("Calibri")
-        defaultFontNames.add("Bahnschrift")
-        defaultFontNames.add("Century Gothic")
-
-        this.backgroundFile = backgroundFile
-        this.noiseFile = noiseFile
-
-        TEXT_COLOR = "0xf598ed"
-
-        IMAGE_WIDTH = 500
-        IMAGE_HEIGHT = 250
-        TEXT_SIZE = 100
-    }
-
-    constructor(backgroundFile: File, noiseFile: File, imageWidth: Int, imageHeight: Int, textSize: Int, colorCode: String) {
+    constructor(backgroundFile: File, noiseFile: File, imageWidth: Int = 500, imageHeight: Int = 250, textSize: Int = 100, colorCode: String = "0xf598ed") {
         defaultFontNames.add("Verdana")
         defaultFontNames.add("Arial")
         defaultFontNames.add("Calibri")
