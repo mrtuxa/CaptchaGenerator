@@ -36,30 +36,26 @@ import java.lang.StringBuilder
 import java.util.*
 import kotlin.math.pow
 
-class CaptchaGenerator {
+class CaptchaGenerator(
+    private var backgroundFile: File,
+    private var noiseFile: File,
+    imageWidth: Int = 500,
+    imageHeight: Int = 250,
+    textSize: Int = 100,
+    colorCode: String = "0xf598ed"
+) {
     private val defaultFontNames = ArrayList<String>()
-    private val TEXT_COLOR: String
-    private val IMAGE_WIDTH: Int
-    private val IMAGE_HEIGHT: Int
-    private val TEXT_SIZE: Int
+    private val TEXT_COLOR: String = colorCode
+    private val IMAGE_WIDTH: Int = imageWidth
+    private val IMAGE_HEIGHT: Int = imageHeight
+    private val TEXT_SIZE: Int = textSize
 
-    private var backgroundFile: File
-    private var noiseFile: File
-
-    constructor(backgroundFile: File, noiseFile: File, imageWidth: Int = 500, imageHeight: Int = 250, textSize: Int = 100, colorCode: String = "0xf598ed") {
+    init {
         defaultFontNames.add("Verdana")
         defaultFontNames.add("Arial")
         defaultFontNames.add("Calibri")
         defaultFontNames.add("Bahnschrift")
         defaultFontNames.add("Century Gothic")
-
-        this.backgroundFile = backgroundFile
-        this.noiseFile = noiseFile
-
-        IMAGE_WIDTH = imageWidth
-        IMAGE_HEIGHT = imageHeight
-        TEXT_SIZE = textSize
-        TEXT_COLOR = colorCode
     }
 
     /**
