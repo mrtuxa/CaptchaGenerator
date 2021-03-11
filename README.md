@@ -17,7 +17,7 @@ This project allows you to generate a captcha image for your project. I will pro
     <dependency>
 	    <groupId>com.github.zflxw</groupId>
 	    <artifactId>CaptchaGenerator</artifactId>
-	    <version>1.0-SNAPSHOT</version>
+	    <version>1.0.1-SNAPSHOT</version>
     </dependency>
 
 ### Gradle
@@ -27,7 +27,7 @@ This project allows you to generate a captcha image for your project. I will pro
     }
 #### Add the dependency
     dependencies {
-       implementation 'com.github.zflxw:CaptchaGenerator:1.0-SNAPSHOT'
+       implementation 'com.github.zflxw:CaptchaGenerator:1.0.1-SNAPSHOT'
     }
 
 # How does it work?
