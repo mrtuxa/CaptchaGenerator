@@ -1,5 +1,7 @@
 # Captcha Generator
 
+[![](https://jitpack.io/v/zFlxw/CaptchaGenerator.svg)](https://jitpack.io/#zFlxw/CaptchaGenerator)
+
 This project allows you to generate a captcha image for your project. I will probably not work actively on this repository. However, if you want to contribute to this repository, feel free to commit your code and open a pull request. 
 
 # Add to your project
@@ -17,7 +19,7 @@ This project allows you to generate a captcha image for your project. I will pro
     <dependency>
 	    <groupId>com.github.zflxw</groupId>
 	    <artifactId>CaptchaGenerator</artifactId>
-	    <version>1.0-SNAPSHOT</version>
+	    <version>1.0.0-SNAPSHOT</version>
     </dependency>
 
 ### Gradle
@@ -27,7 +29,7 @@ This project allows you to generate a captcha image for your project. I will pro
     }
 #### Add the dependency
     dependencies {
-       implementation 'com.github.zflxw:CaptchaGenerator:1.0-SNAPSHOT'
+       implementation 'com.github.zflxw:CaptchaGenerator:1.0.0-SNAPSHOT'
     }
 
 # How does it work?
