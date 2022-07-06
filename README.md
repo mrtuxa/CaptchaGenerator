@@ -34,7 +34,7 @@ This project allows you to generate a captcha image for your project. I will pro
 
 # How does it work?
 Here is a quick example snippet in Kotlin, how to work with this Library. In Java it's almost the same, but if someone wants to add it here, feel free to open a pull request.
-
+```kotlin
     object ExampleUsage {
 	    @JvmStatic  
 	    fun main(args: Array<String>) {  
@@ -50,6 +50,23 @@ Here is a quick example snippet in Kotlin, how to work with this Library. In Jav
 	        ImageIO.write(captchaGenerator.getCaptchaImage(CaptchaGenerator.generateCode()), "png", outputFile)  
 	     }
      }
+```
+```java
+     public void ExampleUsage() throws IOException {
+        // declare references to the background and noise file and the output file
+        File bgFile = new File("background.png");
+        File noiseFile = new File("noise.png");
+        File outputFile = new File("output.png");
+
+        // Create a new instance of the Captcha class.
+        CaptchaGenerator captchaGenerator = new CaptchaGenerator(bgFile, noiseFile);
+
+        // write the generated image to a file
+        ImageIO.write(captchaGenerator.getCaptchaImage(CaptchaGenerator.generateCode(10)), "png", outputFile);
+
+
+    }
+```
 
 # Example Result
 
