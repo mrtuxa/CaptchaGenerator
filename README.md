@@ -8,29 +8,33 @@ This project allows you to generate a captcha image for your project. I will pro
 ### Maven
 
  #### Add jitpack as repository
-
+```xml
     <repository>
 		<id>jitpack.io</id>
 		<url>https://jitpack.io</url>
     </repository>
-
+```
 #### Add the dependency
-
+```xml
     <dependency>
 	    <groupId>com.github.zflxw</groupId>
 	    <artifactId>CaptchaGenerator</artifactId>
 	    <version>1.0.0-SNAPSHOT</version>
     </dependency>
-
+```
 ### Gradle
 #### Add jitpack as repository
-    repositories {
+ ```groovy
+ repositories {
         maven { url 'https://jitpack.io'}
     }
+```
 #### Add the dependency
+ ```groovy
     dependencies {
        implementation 'com.github.zflxw:CaptchaGenerator:1.0.0-SNAPSHOT'
     }
+```
 
 # How does it work?
 Here is a quick example snippet in Kotlin, how to work with this Library. In Java it's almost the same, but if someone wants to add it here, feel free to open a pull request.
@@ -51,6 +55,7 @@ Here is a quick example snippet in Kotlin, how to work with this Library. In Jav
 	     }
      }
 ```
+Here is a quick example snippet in Java
 ```java
      public void ExampleUsage() throws IOException {
         // declare references to the background and noise file and the output file
