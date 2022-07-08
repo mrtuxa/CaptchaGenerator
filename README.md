@@ -51,7 +51,7 @@ Here is a quick example snippet in Kotlin, how to work with this Library. In Jav
 	        val captchaGenerator: CaptchaGenerator = CaptchaGenerator(bgFile, noiseFile)  
       
 	        // write the generated image to a file  
-	        ImageIO.write(captchaGenerator.getCaptchaImage(CaptchaGenerator.generateCode()), "png", outputFile)  
+	        ImageIO.write(captchaGenerator.getCaptchaImage(CaptchaGenerator.generateCode(5)), "png", outputFile)  
 	     }
      }
 ```
@@ -67,7 +67,7 @@ Here is a quick example snippet in Java
         CaptchaGenerator captchaGenerator = new CaptchaGenerator(bgFile, noiseFile);
 
         // write the generated image to a file
-        ImageIO.write(captchaGenerator.getCaptchaImage(CaptchaGenerator.generateCode(10)), "png", outputFile);
+        ImageIO.write(captchaGenerator.getCaptchaImage(CaptchaGenerator.generateCode(5)), "png", outputFile);
 
 
     }
